@@ -63,7 +63,7 @@ module.exports = {
       "radix": "error",
       "require-await": "error",
       "require-unicode-regexp": "error",
-      "vars-on-top": "error",
+      "vars-on-top": "off", //this is JS, if I use var, I mean it to be hoisted.
       "yoda": "error"
     },
     "problem": {
