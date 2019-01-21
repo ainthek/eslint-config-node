@@ -1,0 +1,23 @@
+{
+  "name": "@ainthek/eslint-config-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ainthek/eslint-config-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ainthek/eslint-config-node/issues"
+  },
+  "homepage": "https://github.com/ainthek/eslint-config-node#readme",
+  "peerDependencies": {
+    "eslint": "^5.12.1"
+  },
+  "dependencies": {}
+}
