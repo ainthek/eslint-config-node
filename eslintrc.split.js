@@ -25,7 +25,7 @@ module.exports = {
       "no-extra-label": "error",
       "no-floating-decimal": "error",
       "no-global-assign": "error",
-      "no-implicit-coercion": "error",
+      "no-implicit-coercion": ["error", { "boolean": false }], //!! is pretty ok,
       "no-implicit-globals": "error", //parser options or off
       "no-implied-eval": "error",
       "no-invalid-this": "error", // problem z mocha testami tam sa this.timeout() pouziva
@@ -50,7 +50,7 @@ module.exports = {
       "no-script-url": "error",
       "no-sequences": "error",
       "no-throw-literal": "error",
-      "no-unused-expressions": "error",
+      "no-unused-expressions": ["error", { "allowShortCircuit": true }],
       "no-unused-labels": "error",
       "no-useless-call": "error",
       "no-useless-concat": "error",
@@ -71,7 +71,7 @@ module.exports = {
       "no-empty-pattern": "error",
       "no-fallthrough": "error",
       "no-self-assign": "error",
-      "no-self-compare": "error",
+      "no-self-compare": "warn", // === is perfect, could be Number.isNaN but this is perfect JS and still faster
       "no-unmodified-loop-condition": "error"
     },
     "layout": {
@@ -226,7 +226,7 @@ module.exports = {
   "Node.js and CommonJS": {
     "suggestion": {
       "callback-return": "error",
-      "global-require": "error",
+      "global-require": "warn", // it can cause performance problems
       "handle-callback-err": "error",
       "no-mixed-requires": "error",
       "no-new-require": "error",
