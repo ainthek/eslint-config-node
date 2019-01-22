@@ -9,7 +9,7 @@ module.exports = {
       "curly": "off", // alebo vytunovat bezbe pisem oneliner for cyklus tak neviem 
       "default-case": "error",
       "dot-notation": "error",
-      "eqeqeq": "error",
+      "eqeqeq": ["warn", "smart"], //two literal values, value of typeof,Comparing against null
       "guard-for-in": "error",
       "max-classes-per-file": "error",
       "no-alert": "error",
@@ -18,7 +18,7 @@ module.exports = {
       "no-div-regex": "error",
       "no-else-return": "error",
       "no-empty-function": "error",
-      "no-eq-null": "error",
+      "no-eq-null": "off", // basic JS knowledge
       "no-eval": "error",
       "no-extend-native": "error",
       "no-extra-bind": "error",
@@ -41,7 +41,7 @@ module.exports = {
       "no-new": "error",
       "no-octal-escape": "error",
       "no-octal": "error",
-      "no-param-reassign": "error",
+      "no-param-reassign": "off", // we do this often, why reinvent new var names ?
       "no-proto": "error",
       "no-redeclare": "error",
       "no-restricted-properties": "error",
@@ -296,7 +296,7 @@ module.exports = {
       "no-shadow-restricted-names": "error",
       "no-shadow": "warn", // toto bezne robim
       "no-undef-init": "error",
-      "no-undefined": "error"
+      "no-undefined": "off" // TODO: argument this
     },
     "problem": {
       "no-undef": "error",

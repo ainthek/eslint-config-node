@@ -37,3 +37,13 @@ This is perfectly ok JS (we need no IFs):
 
 The real problem is if JS reader does nor understand x === x as check for NaN.
 Again this is JS, Java coders go away please !!!
+
+## no-eq-null Best Practices suggestion
+
+off, this is basic JS knowledge, if you do not know this, return to your Java IDE immediatelly please
+
+## Misc
+
+count errors by rule: 
+
+	npx eslint ./src --quiet  -f json | JSONStream "*.messages.*.ruleId" | jsontool -a | cnt
