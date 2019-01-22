@@ -28,7 +28,7 @@ module.exports = {
       "no-implicit-coercion": ["error", { "boolean": false }], //!! is pretty ok,
       "no-implicit-globals": "error", //parser options or off
       "no-implied-eval": "error",
-      "no-invalid-this": "error", // problem z mocha testami tam sa this.timeout() pouziva
+      "no-invalid-this": "error", // exclude ad-hoc with inline comment and document why
       "no-iterator": "error",
       "no-labels": "error",
       "no-lone-blocks": "error",
@@ -55,7 +55,7 @@ module.exports = {
       "no-useless-call": "error",
       "no-useless-concat": "error",
       "no-useless-escape": "error",
-      "no-useless-return": "error",
+      "no-useless-return": "off", // sometimes it is more readable
       "no-void": "error",
       "no-warning-comments": "warn", // toto bezne mavame v kode, mozno produkcne off
       "no-with": "error",
