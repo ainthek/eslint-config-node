@@ -18,7 +18,7 @@ for (const [key, value] of loadedRules) {
   r[category][type] || (r[category][type] = {})
   r[category][type][key] = "off";
 }
-let out = `${__dirname}/eslintrc.split.js`;
+let out = `./eslintrc.split.js`;
 fs.writeFile(out, JSON.stringify(r, 0, 2), function() {
   console.log("done", out);
 })
