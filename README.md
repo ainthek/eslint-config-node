@@ -42,6 +42,16 @@ Again this is JS, Java coders go away please !!!
 
 off, this is basic JS knowledge, if you do not know this, return to your Java IDE immediatelly please
 
+## no-use-before-define	Variables problem
+
+This shell be default:
+
+	"no-use-before-define": ["error", { "functions": false, "variables": false }],
+
+Hoisting is design, not a bug, and may bring more readable sources
+
+
+
 ## Misc
 
 count errors by rule: 
