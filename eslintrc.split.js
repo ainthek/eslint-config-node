@@ -301,7 +301,7 @@ module.exports = {
     "problem": {
       "no-undef": "error",
       "no-unused-vars": "error",
-      "no-use-before-define": ["error", { "functions": false }] //nato pouzivam function declaration predsa aby som ju pisal pod zdrojak a nie hore, toto neni pascal
+      "no-use-before-define": ["error", { "functions": false, "variables": false }] //nato pouzivam function declaration predsa aby som ju pisal pod zdrojak a nie hore, toto neni pascal, detto var
     }
   },
   "Strict Mode": {
