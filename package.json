@@ -1,8 +1,11 @@
 {
   "name": "@ainthek/eslint-config-node",
-  "version": "1.4.0",
+  "version": "1.6.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "eslint-split-rules": "./tools/eslint-split-rules.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +22,9 @@
   "peerDependencies": {
     "eslint": "^5.12.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "slugify": "^1.3.4"
+  }
 }
