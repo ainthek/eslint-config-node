@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /* 
 gets all loaded rules,
 and creates split config by "category"	
