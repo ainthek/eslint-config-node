@@ -13,7 +13,8 @@ module.exports = {
     // from ...rules["ECMAScript 6"]["layout"],
     "template-curly-spacing": ["error", "never"],
     ...rules["Node.js and CommonJS"]["problem"],
-    ...rules["Node.js and CommonJS"]["suggestion"]
+    ...rules["Node.js and CommonJS"]["suggestion"],
+    ...rules["deprecated"]
   },
   "env": {
     "node": true,

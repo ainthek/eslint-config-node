@@ -308,5 +308,20 @@ module.exports = {
     "suggestion": {
       "strict": "error"
     }
-  }
+  },
+  "deprecated": {
+    "indent-legacy": "off",
+    "lines-around-directive": "off",
+    "newline-after-var": "off",
+    "newline-before-return": "off",
+    "no-catch-shadow": "off",
+    "no-native-reassign": "off",
+    "no-negated-in-lhs": "off",
+    "no-spaced-func": "off",
+    "prefer-reflect": "off",
+    "require-jsdoc": "off",
+    "valid-jsdoc": "off",
+    // "node/no-hide-core-modules": "off",
+    // "node/no-unsupported-features": "off"
+  },
 }
