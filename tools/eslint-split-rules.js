@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 /* 
 gets all loaded rules,
 and creates split config by "category"  
@@ -26,8 +27,9 @@ for (const [key, value] of getAllLoadedRules()) {
   r[category] || (r[category] = {});
   r[category][type] || (r[category][type] = {})
   r[category][type][key] = "error";
-  if(value.meta.deprecated){
-    r["deprecated"][key]="off";  
+  if (value.meta.deprecated) {
+    r["deprecated"] || (r["deprecated"] = {});
+    r["deprecated"][key] = "off";
   }
 }
 let out = `./eslintrc.split.js`;
