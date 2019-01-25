@@ -26,7 +26,7 @@ for (const [key, value] of getAllLoadedRules()) {
   r[category] || (r[category] = {});
   r[category][type] || (r[category][type] = {})
   r[category][type][key] = "error";
-  if(meta.value.deprecated){
+  if(value.meta.deprecated){
     r["deprecated"][key]="off";  
   }
 }
