@@ -26,6 +26,9 @@ for (const [key, value] of getAllLoadedRules()) {
   r[category] || (r[category] = {});
   r[category][type] || (r[category][type] = {})
   r[category][type][key] = "error";
+  if(meta.value.deprecated){
+    r["deprecated"][key]="off";  
+  }
 }
 let out = `./eslintrc.split.js`;
 fs.writeFile(out, JSON.stringify(r, 0, 2), function() {
