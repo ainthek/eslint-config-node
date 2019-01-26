@@ -50,6 +50,12 @@ This shell be default:
 
 Hoisting is design, not a bug, and may bring more readable sources
 
+## no-confusing-arrow
+off
+
+If this is confusing, then really leave JavaScript and code in something else.
+I do not believe someone can misplace => and <= or misread this in given context.
+
 
 
 ## Misc

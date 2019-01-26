@@ -8,7 +8,7 @@ module.exports = {
       "consistent-return": "error", // uff toto treba nastudovat 
       "curly": "off", // alebo vytunovat bezbe pisem oneliner for cyklus tak neviem 
       "default-case": "error",
-      "dot-notation": "error",
+      "dot-notation": ["error", { "allowKeywords": false }], // ale casto by som dal off, pouizva sa to aj kvoli symetrickemu kody, nie len kvoli keywordom 
       "eqeqeq": ["warn", "smart"], //two literal values, value of typeof,Comparing against null
       "guard-for-in": "error",
       "max-classes-per-file": "error",
@@ -186,7 +186,7 @@ module.exports = {
   "ECMAScript 6": {
     "suggestion": {
       "arrow-body-style": "warn", //TODO: I dont want this error, because of --fix
-      "no-confusing-arrow": "error",
+      "no-confusing-arrow": "off", // it is not confusing at all
       "no-restricted-imports": "error",
       "no-useless-computed-key": "error",
       "no-useless-constructor": "error",
