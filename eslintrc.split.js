@@ -32,7 +32,7 @@ module.exports = {
       "no-iterator": "error",
       "no-labels": "error",
       "no-lone-blocks": "error",
-      "no-loop-func": "error",
+      "no-loop-func": "error", //can keep it as error, no so many to exclude
       "no-magic-numbers": "warn", //podla mna plosne blbost, este aj v defaultoch
       "no-multi-str": "error",
       "no-native-reassign": "error",
@@ -72,7 +72,8 @@ module.exports = {
       "no-fallthrough": "error",
       "no-self-assign": "error",
       "no-self-compare": "warn", // === is perfect, could be Number.isNaN but this is perfect JS and still faster
-      "no-unmodified-loop-condition": "error"
+      "no-unmodified-loop-condition": "error",
+      "node/no-deprecated-api": "error"
     },
     "layout": {
       "dot-location": "error",
@@ -180,7 +181,15 @@ module.exports = {
       "require-jsdoc": "error",
       "sort-keys": "error",
       "sort-vars": "error",
-      "spaced-comment": "error"
+      "spaced-comment": "error",
+      "node/exports-style": "error",
+      "node/prefer-global/buffer": "error",
+      "node/prefer-global/console": "error",
+      "node/prefer-global/process": "error",
+      "node/prefer-global/text-decoder": "error",
+      "node/prefer-global/text-encoder": "error",
+      "node/prefer-global/url-search-params": "error",
+      "node/prefer-global/url": "error"
     }
   },
   "ECMAScript 6": {
@@ -263,7 +272,7 @@ module.exports = {
       "no-misleading-character-class": "error",
       "no-negated-in-lhs": "error",
       "no-obj-calls": "error",
-      "no-prototype-builtins": "error",
+      "no-prototype-builtins": "error", // I would leave this error by default, and turn off per code
       "no-sparse-arrays": "error",
       "no-template-curly-in-string": "error",
       "no-unexpected-multiline": "error",
@@ -272,11 +281,25 @@ module.exports = {
       "no-unsafe-negation": "error",
       "require-atomic-updates": "error",
       "use-isnan": "error",
-      "valid-typeof": "error"
+      "valid-typeof": "error",
+      "node/no-extraneous-import": "error",
+      "node/no-extraneous-require": "error",
+      "node/no-missing-import": "error",
+      "node/no-missing-require": "error",
+      "node/no-unpublished-bin": "error",
+      "node/no-unpublished-import": "error",
+      "node/no-unpublished-require": "error",
+      "node/no-unsupported-features/es-builtins": "error",
+      "node/no-unsupported-features/es-syntax": "error",
+      "node/no-unsupported-features/node-builtins": "error",
+      "node/process-exit-as-throw": "error",
+      "node/shebang": "error",
+      "node/no-hide-core-modules": "error",
+      "node/no-unsupported-features": "error"
     },
     "suggestion": {
       "no-console": "error",
-      "no-empty": "error",
+      "no-empty": "error", // exclude in code with explanation
       "no-extra-boolean-cast": "error",
       "no-extra-semi": "error",
       "no-regex-spaces": "error",
@@ -321,7 +344,7 @@ module.exports = {
     "prefer-reflect": "off",
     "require-jsdoc": "off",
     "valid-jsdoc": "off",
-    // "node/no-hide-core-modules": "off",
-    // "node/no-unsupported-features": "off"
+    "node/no-hide-core-modules": "off",
+    "node/no-unsupported-features": "off"
   },
 }

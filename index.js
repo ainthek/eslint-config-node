@@ -1,6 +1,9 @@
 const on = () => { for (let k in o) { k[o] = "error" } };
 const rules = require("./eslintrc.split.js");
 module.exports = {
+  "plugins": [
+    "node"
+  ],
   "rules": {
     ...rules["Possible Errors"]["problem"],
     ...rules["Possible Errors"]["suggestion"],
