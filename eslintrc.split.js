@@ -52,10 +52,11 @@ module.exports = {
       "no-throw-literal": "error",
       "no-unused-expressions": ["error", { "allowShortCircuit": true }],
       "no-unused-labels": "error",
-      "no-useless-call": "error",
+       "no-useless-call": "error",
+      "no-useless-catch": "error",
       "no-useless-concat": "error",
       "no-useless-escape": "error",
-      "no-useless-return": "off", // sometimes it is more readable
+      "no-useless-return": "off", // it is more readable sometimes
       "no-void": "error",
       "no-warning-comments": "warn", // toto bezne mavame v kode, mozno produkcne off
       "no-with": "error",
