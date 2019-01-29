@@ -56,7 +56,9 @@ off
 If this is confusing, then really leave JavaScript and code in something else.
 I do not believe someone can misplace => and <= or misread this in given context.
 
+## sort-imports
 
+by alphabet ? no way, there are more logical ways to sort imports
 
 ## Misc
 

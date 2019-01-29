@@ -17,7 +17,7 @@ module.exports = {
       "no-case-declarations": "error",
       "no-div-regex": "error",
       "no-else-return": "error",
-      "no-empty-function": "error",
+      "no-empty-function": "error", // if needed exclude in code
       "no-eq-null": "off", // basic JS knowledge
       "no-eval": "error",
       "no-extend-native": "error",
@@ -72,7 +72,7 @@ module.exports = {
       "no-fallthrough": "error",
       "no-self-assign": "error",
       "no-self-compare": "warn", // === is perfect, could be Number.isNaN but this is perfect JS and still faster
-      "no-unmodified-loop-condition": "error",
+      "no-unmodified-loop-condition": "error", //podla mna OK, ak treba tak okomentovat v zdrojaku
       "node/no-deprecated-api": "error"
     },
     "layout": {
@@ -211,7 +211,7 @@ module.exports = {
       "prefer-spread": "error",
       "prefer-template": "error", // jasne 
       "require-yield": "error",
-      "sort-imports": "error",
+      "sort-imports": "off", // shell be ordered by importance or other not alphabet
       "symbol-description": "error"
     },
     "layout": {
