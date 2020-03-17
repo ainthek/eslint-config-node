@@ -1,32 +1,34 @@
 #!/usr/bin/env node
 
 /* 
-tooling for this project
-gets all loaded rules,
-and creates split config by "category"  
+Displays all rules from eslint, and node/recommended
+Displays as hierarchy of Category/Type
+And displays current value of config 
+
+// toto jie je asi moc uzitocne, ale 
+TODO: display as list, add comparison with default value and your value
 */
 
 const { CLIEngine } = require("eslint");
 
-//function getAllLoadedRules() {
+
 const cli = new CLIEngine();
 const rules1 = cli.getRules(); //unusable
 
 const cfg = cli.getConfigForFile("FOO.js");
 
 
-const { globals, extends: _extends, /*others*/ ...others } = cfg;
+const { globals, extends: _extends, ...others } = cfg;
 
 const cli2 = new CLIEngine({
   baseConfig: {
-    globals,
-    extends: _extends
-  },
-  ...others
+    extends: [
+      "eslint:all",
+      "plugin:node/recommended"
+    ]
+  }
 });
-//return cli2.getRules(); //usable
-//}
-// loaded rules is map, this is map->{c1:{},c2:{},...}
+
 let r = {};
 for (const [key, value] of cli2.getRules()) {
   let category = value.meta.docs.category;
@@ -46,5 +48,6 @@ console.log(JSON.stringify(r, null, 2));
 
 
 function simplify(v) {
+  if (v === undefined) v = "___NOT_LOADED___";
   return Array.isArray(v) && v.length === 1 ? v[0] : v;
 }
