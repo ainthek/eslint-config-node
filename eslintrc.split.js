@@ -8,8 +8,10 @@ module.exports = {
       "consistent-return": "error", // uff toto treba nastudovat 
       "curly": "off", // alebo vytunovat bezbe pisem oneliner for cyklus tak neviem 
       "default-case": "error",
+      "default-param-last": "error",
       "dot-notation": ["error", { "allowKeywords": false }], // ale casto by som dal off, pouizva sa to aj kvoli symetrickemu kody, nie len kvoli keywordom 
       "eqeqeq": ["warn", "smart"], //two literal values, value of typeof,Comparing against null
+      "grouped-accessor-pairs": "error",
       "guard-for-in": "error",
       "max-classes-per-file": "error",
       "no-alert": "error",
@@ -52,14 +54,16 @@ module.exports = {
       "no-throw-literal": "error",
       "no-unused-expressions": ["error", { "allowShortCircuit": true }],
       "no-unused-labels": "error",
-       "no-useless-call": "error",
+      "no-useless-call": "error",
       "no-useless-catch": "error",
       "no-useless-concat": "error",
       "no-useless-escape": "error",
       "no-useless-return": "off", // it is more readable sometimes
       "no-void": "error",
       "no-warning-comments": "warn", // toto bezne mavame v kode, mozno produkcne off
-      "no-with": "error",
+      "prefer-named-capture-group": "off", //TODO: maybe warn one day
+      "prefer-promise-reject-errors": "error",
+      "prefer-regex-literals": "error",
       "prefer-promise-reject-errors": "error",
       "radix": "error",
       "require-await": "error",
@@ -69,6 +73,7 @@ module.exports = {
     },
     "problem": {
       "array-callback-return": "error", // mozno este { allowImplicit: true }
+      "no-constructor-return": "error",
       "no-empty-pattern": "error",
       "no-fallthrough": "error",
       "no-self-assign": "error",
@@ -216,9 +221,9 @@ module.exports = {
       "symbol-description": "error"
     },
     "layout": {
-      "arrow-parens": "error",
+      "arrow-parens": "off", // I do not care, personal preference
       "arrow-spacing": "error",
-      "generator-star-spacing": "error",
+      "generator-star-spacing": ["error", { "before": false, "after": true }], // function* xxx, it is a special function not a special name of function
       "rest-spread-spacing": "error",
       "template-curly-spacing": ["error", "never"], // useful with --fix and prefer-template errors 
       "yield-star-spacing": "error"
@@ -262,11 +267,13 @@ module.exports = {
       "no-control-regex": "error",
       "no-debugger": "error",
       "no-dupe-args": "error",
+      "no-dupe-else-if": "error",
       "no-dupe-keys": "error",
       "no-duplicate-case": "error",
       "no-empty-character-class": "error",
       "no-ex-assign": "error",
       "no-func-assign": "error",
+      "no-import-assign": "error",
       "no-inner-declarations": "error",
       "no-invalid-regexp": "error",
       "no-irregular-whitespace": "error",
@@ -274,6 +281,7 @@ module.exports = {
       "no-negated-in-lhs": "error",
       "no-obj-calls": "error",
       "no-prototype-builtins": "error", // I would leave this error by default, and turn off per code
+      "no-setter-return": "error",
       "no-sparse-arrays": "error",
       "no-template-curly-in-string": "error",
       "no-unexpected-multiline": "error",
@@ -283,6 +291,8 @@ module.exports = {
       "require-atomic-updates": "error",
       "use-isnan": "error",
       "valid-typeof": "error",
+      "node/no-callback-literal": "error",
+      "node/no-exports-assign": "error",
       "node/no-extraneous-import": "error",
       "node/no-extraneous-require": "error",
       "node/no-missing-import": "error",

@@ -13,6 +13,7 @@ module.exports = {
     ...rules["Best Practices"]["suggestion"],
     ...rules["ECMAScript 6"]["problem"],
     ...rules["ECMAScript 6"]["suggestion"],
+    ...rules["ECMAScript 6"]["layout"],
     // from ...rules["ECMAScript 6"]["layout"],
     "template-curly-spacing": ["error", "never"],
     ...rules["Node.js and CommonJS"]["problem"],
